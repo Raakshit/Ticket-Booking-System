@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Siemreap&display=swap');
+
+.booking_container{
+    display: flex;
+    margin-top: 6rem;
+}
+
+.upper{
+    display: flex;
+    flex: 0.3;
+    margin-bottom: 5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.lower{
+    display: flex;
+    flex: 0.7;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0rem 4rem;
+
+}
+
+.time_card{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 1rem 0rem;
+    width: 300px;
+    height: 400px;
+    /* border: 1px solid red; */
+    border-radius: 30px;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    margin: 2rem;
+    /* margin-left: 4rem; */
+}
+
+.image_booking_card{
+    justify-content: flex-start;
+    width: 300px;
+    height: 104px;
+}
+
+.image_booking_card>img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.card_info{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid pink ; */
+    margin-bottom: 1rem;
+}
+
+h3{
+    font-family: 'Jua';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #000000;
+    margin: 24px 0px;
+}
+
+.info_heading{
+    margin: 0rem;
+    font-family: 'Jua';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #000000;
+}
+.information{
+    margin: 0rem;
+    font-family: 'Jua';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+.button_booking_card{
+    justify-content: flex-end;
+    /* border: 1px solid yellow; */
+}
+
+.button_booking_card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #36B443;
+    font-weight: 500;
+    font-size: large;
+    /* border-radius: 40px; */
+
+}
+
+.alert_card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    /* border: 1px solid grey; */
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    border-radius: 40px;
+    /* margin-left: 4rem; */
+    background-color: #b23849;
+}
+
+.booking_button{
+    /* text-decoration: none; */
+    border: 0px;
+    background-color: #36B443;
+    height: 54px;
+}
