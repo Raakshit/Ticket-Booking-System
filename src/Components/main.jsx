@@ -1,5 +1,6 @@
 import React from "react";
 import "./main.css";
+import Login from "./Login";
 import therater from "./images/therater.jpg";
 import Dome from "./images/Dome.jpg";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -8,8 +9,19 @@ import { Link } from "react-router-dom";
 import G1 from "./images/G1.jpg";
 import G2 from "./images/G2.jpg";
 import G3 from "./images/G3.jpg";
+import { useStateValue } from "../Context/StateProvider";
+import { actionType } from "../Context/reducer";
 
-const main = () => {
+const Main = () => {
+  const [{ showlogin }, dispatch] = useStateValue();
+
+  const loginshow = () => {
+    dispatch({
+      type: actionType.SET_SHOW_LOGIN,
+      showlogin: !showlogin,
+    });
+  };
+
   return (
     <div className="main">
       <section className="main_banner_card">
@@ -24,11 +36,11 @@ const main = () => {
           </div>
           <div className="details_card">
             <h1>Detination Manipal University</h1>
-            <Link to={"/booking"}>
             <div>
-            <button>BOOK TICKETS</button>
+              <Link to={"/booking"}>
+              <button onClick={loginshow}>BOOK TICKETS</button>
+              </Link>
             </div>
-            </Link>
           </div>
         </div>
 
@@ -83,7 +95,7 @@ const main = () => {
           </div>
 
           <div className="about_section">
-            <h1>What is Manipal University ?</h1>
+            <h1>Why Manipal University ?</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Reprehenderit eaque vero reiciendis placeat qui minima aut
@@ -95,8 +107,11 @@ const main = () => {
           </div>
         </div>
       </section>
+      {showlogin && (
+        <Login/>
+      )}
     </div>
   );
 };
 
-export default main;
+export default Main;

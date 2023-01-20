@@ -1,46 +1,54 @@
-import React, { useState } from 'react';
-import './Login.css';
-import logo from "./images/Logo.png";
-import login from './images/Login.jpeg';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import "./Login.css";
+// import logo from "./images/Logo.png";
+// import login from "./images/Login.jpeg";
+// import { Link } from "react-router-dom";
 
 function Login() {
-  // const userid = "demo@muj.manipal.edu";
-  // const userotp = 1234;
-
-  const [userId, setuserId] = useState("")
-  const [userOTP, setuserOTP] = useState()
-
   return (
     <div className="main_login">
-    <div className="login_img_card">
-    <img  src={login} alt=''/>
-    </div> 
-      <div className = 'sub-main'>
-          <img src={logo} alt=''/> 
-          <div className="login_heading">
-          <h2>EXPERIENCE THEATER LOGIN</h2>
-          </div>
-          <div className='wrappers'>
-          <div className='login'>
-             <label>E-mail: </label>
-             <input type='email' placeholder='Muj E-mail'onChange={(e) => setuserId(e.target.value)} ></input>
-          </div>
-          <div>
-            <button  className='button' >Send OTP</button>
-          </div>
-          <div className='login'>
-             <label>OTP: </label>
-             <input type='password' placeholder='OTP' onChange={(e) => setuserOTP(e.target.value)} ></input>
-          </div>
-          <div>
-            <Link to={"/"}>
-              <button className='button1'>Login</button>
-            </Link>
-            
-          </div>
+      <h1>LOGIN PAGE</h1>
+      {/* <div class="card">
+        <div class="card-image">
+          <h2 class="card-heading">
+            Get started
+            <small>Let us create your account</small>
+          </h2>
         </div>
-      </div>
+        <form class="card-form">
+          <div class="input">
+            <input
+              type="text"
+              class="input-field"
+              value="Alexander Parkinson"
+              required
+            />
+            <label class="input-label">Full name</label>
+          </div>
+          <div class="input">
+            <input
+              type="text"
+              class="input-field"
+              value="vlockn@gmail.com"
+              required
+            />
+            <label class="input-label">Email</label>
+          </div>
+          <div class="input">
+            <input type="password" class="input-field" required />
+            <label class="input-label">Password</label>
+          </div>
+          <div class="action">
+            <button class="action-button">Get started</button>
+          </div>
+        </form>
+        <div class="card-info">
+          <p>
+            By signing up you are agreeing to our{" "}
+            <a href="#">Terms and Conditions</a>
+          </p>
+        </div>
+      </div> */}
     </div>
   );
 }
