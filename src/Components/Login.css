@@ -5,15 +5,19 @@
 	 background-color: #f1f3fb;
 	 padding: 0 2rem;
 } */
-.main_login{
+/* .main_login{
   z-index: 101;
-  position: fixed;
-  top: 4rem;
   background-color: white;
-  width: 380px;
-  height: 500px;
-}
- /* img {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+  width: 480px;
+  height: 600px;
+  top: 7rem;
+} */
+ img {
 	 max-width: 100%;
 	 display: block;
 }
@@ -21,15 +25,18 @@
 	 appearance: none;
 	 border-radius: 0;
 }
- .card {
+.card {
+	position: absolute;
+	z-index: 101;
+	top: 3rem;
 	 margin: 2rem auto;
 	 display: flex;
 	 flex-direction: column;
 	 width: 100%;
 	 max-width: 425px;
 	 background-color: #fff;
-	 border-radius: 10px;
-	 box-shadow: 0 10px 20px 0 rgba(153, 153, 153, .25);
+	 border-radius: 20px;
+	 box-shadow: 0px 20px 30px 0 rgba(10, 10, 10, .5);
 	 padding: 0.75rem;
 }
  .card-image {
@@ -44,9 +51,7 @@
 }
  .card-heading {
 	 position: absolute;
-	 left: 10%;
-	 top: 15%;
-	 right: 10%;
+	 margin: 1rem 1rem;
 	 font-size: 1.75rem;
 	 font-weight: 700;
 	 color: #735400;
@@ -95,6 +100,7 @@
 }
  .action {
 	 margin-top: 2rem;
+	 margin-bottom: 2rem;
 }
  .action-button {
 	 font: inherit;
@@ -121,4 +127,4 @@
 	 color: #6658d3;
 	 text-decoration: none;
 }
-  */
+ 

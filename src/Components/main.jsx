@@ -24,6 +24,7 @@ const Main = () => {
 
   return (
     <div className="main">
+      <div className={`${showlogin ? "main_blur" : ""}`}>
       <section className="main_banner_card">
         <div className="banner_card">
           <img src={therater} alt="" />
@@ -37,9 +38,7 @@ const Main = () => {
           <div className="details_card">
             <h1>Detination Manipal University</h1>
             <div>
-              <Link to={"/booking"}>
               <button onClick={loginshow}>BOOK TICKETS</button>
-              </Link>
             </div>
           </div>
         </div>
@@ -107,8 +106,11 @@ const Main = () => {
           </div>
         </div>
       </section>
+      </div>
       {showlogin && (
-        <Login/>
+        <div className="loginshow_card">
+          <Login/>
+        </div>
       )}
     </div>
   );

@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import "./Login.css";
 // import logo from "./images/Logo.png";
 // import login from "./images/Login.jpeg";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <div className="main_login">
-      <h1>LOGIN PAGE</h1>
-      {/* <div class="card">
+      <div class="card">
         <div class="card-image">
           <h2 class="card-heading">
             Get started
@@ -20,7 +18,6 @@ function Login() {
             <input
               type="text"
               class="input-field"
-              value="Alexander Parkinson"
               required
             />
             <label class="input-label">Full name</label>
@@ -29,7 +26,6 @@ function Login() {
             <input
               type="text"
               class="input-field"
-              value="vlockn@gmail.com"
               required
             />
             <label class="input-label">Email</label>
@@ -39,17 +35,18 @@ function Login() {
             <label class="input-label">Password</label>
           </div>
           <div class="action">
+            <Link to={"/Booking"}>
             <button class="action-button">Get started</button>
+            </Link>
           </div>
         </form>
-        <div class="card-info">
+        {/* <div class="card-info">
           <p>
             By signing up you are agreeing to our{" "}
             <a href="#">Terms and Conditions</a>
           </p>
-        </div>
-      </div> */}
-    </div>
+        </div> */}
+      </div>
   );
 }
 

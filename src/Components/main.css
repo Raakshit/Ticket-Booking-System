@@ -20,7 +20,12 @@ button{
     /* margin: 10px; */
     /* height: 100vh; */
 }
-
+.main_blur{
+    opacity: 0.3;
+    /* z-index: 100; */
+    position: fixed;
+    pointer-events: none;
+}
 .main_banner_card{
     /* border: 1px solid green; */
     width: 100%;
@@ -118,4 +123,11 @@ button{
     margin-top: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.loginshow_card{
+    /* background-color: rgba(0, 0, 255, 0.4); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
