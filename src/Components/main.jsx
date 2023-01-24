@@ -5,7 +5,6 @@ import therater from "./images/therater.jpg";
 import Dome from "./images/Dome.jpg";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { Link } from "react-router-dom";
 import G1 from "./images/G1.jpg";
 import G2 from "./images/G2.jpg";
 import G3 from "./images/G3.jpg";

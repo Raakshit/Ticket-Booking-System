@@ -92,7 +92,9 @@ const verifyOtp = async(e) => {
           <label class="input-label">Otp</label>
         </div>
         <div class="action">
-            <button class="action-button" onClick={verifyOtp}>Get started</button>
+          <Link to={"/booking"}><button class="action-button" >Get started</button></Link>
+          
+            
         </div>
       </form>
       {/* <div class="card-info">

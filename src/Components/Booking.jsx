@@ -8,16 +8,16 @@ import Evening from "./images/evening.jpeg";
 import { useStateValue } from "../Context/StateProvider";
 import { actionType } from "../Context/reducer";
 import Bookingdetails from "./Bookingdetails";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Booking = () => {
 
-const [{showform,morningSeats,eveningSeats} , dispatch] = useStateValue();
+const [{showform,morningSeats,eveningSeats,morningShow,eveningShow,bookDate} , dispatch] = useStateValue();
 
   const [mornigTime, setmornigTime] = useState(false);
   const [eveningTime, seteveningTime] = useState(false);
   const [bottomCard, setbottomCard] = useState(false);
-  const [morningFlag, setmorningFlag] = useState(false);
-  const [eveningFlag, seteveningFlag] = useState(false);
   const [date, setdate] = useState(new Date());
 
 
@@ -53,12 +53,29 @@ const [{showform,morningSeats,eveningSeats} , dispatch] = useStateValue();
 
     if (today >= 0 && isdatetoday(date) === true) {
       setmornigTime(true);
-      window.alert("Morning show can be booked before 9:00 am only");
+      // window.alert("");
+      toast.error('Morning show can be booked before 9:00 am only', {
+        position: "top-center",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     } else {
       
       const response = window.confirm("Do you want to book a ticket?");
       if (response) {
-        setmorningFlag(true);
+        dispatch({
+          type: actionType.SET_MORNING_SHOW,
+          morningShow: !morningShow,
+        });
+        dispatch({
+          type: actionType.SET_BOOKING_DATE,
+          bookDate: date,
+        });
         formshow(response);
         
       } 
@@ -70,12 +87,25 @@ const [{showform,morningSeats,eveningSeats} , dispatch] = useStateValue();
 
     if (today >= 13 && isdatetoday(date) === true) {
       seteveningTime(true);
-      window.alert("Evening show can be booked before 1:00 pm only");
+       // window.alert("");
+       toast.error('Morning show can be booked before 9:00 am only', {
+        position: "top-center",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     } else {
       
       const response = window.confirm("Do you want to book a ticket?");
       if (response) {
-        seteveningFlag(true);
+        dispatch({
+          type: actionType.SET_EVENING_SHOW,
+          eveningShow: !eveningShow,
+        });
         formshow(response);
         
       }
@@ -141,6 +171,18 @@ const [{showform,morningSeats,eveningSeats} , dispatch] = useStateValue();
                 <p className="information">{morningSeats}</p>
               </div>
               <div className="button_booking_card" onClick={book_morning}>
+              <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
                 <button
                   disabled={
                     morningSeats === 0 && mornigTime === true ? true : false
@@ -196,10 +238,7 @@ const [{showform,morningSeats,eveningSeats} , dispatch] = useStateValue();
       ) }
       {showform && (
         <div className="details_form">
-        <Bookingdetails
-        morningFlag={morningFlag}
-        eveningFlag={eveningFlag}
-        />
+        <Bookingdetails/>
       </div>
       )}
       
