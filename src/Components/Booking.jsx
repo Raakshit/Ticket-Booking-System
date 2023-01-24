@@ -11,24 +11,28 @@ import Bookingdetails from "./Bookingdetails";
 
 const Booking = () => {
 
-const [{showform} , dispatch] = useStateValue();
+const [{showform,morningSeats,eveningSeats} , dispatch] = useStateValue();
 
-  const [morningCount, setmorningCount] = useState(2);
-  const [eveningCount, seteveningCount] = useState(2);
   const [mornigTime, setmornigTime] = useState(false);
   const [eveningTime, seteveningTime] = useState(false);
   const [bottomCard, setbottomCard] = useState(false);
+  const [morningFlag, setmorningFlag] = useState(false);
+  const [eveningFlag, seteveningFlag] = useState(false);
   const [date, setdate] = useState(new Date());
-//   const [formFlag, setformFlag] = useState(false)
 
-  // useEffect(() => {
-  //     setbottomCard(false);
-  //   });
 
+  // ******************* ALL REACT CALENDER FUNTIONALITY********************************
+  const todayDate = new Date();
+  const maxDate = new Date();
+  maxDate.setDate(maxDate.getDate() + 40);
+
+
+
+
+
+// FUNCTION FOR CHECKING IS SELECTED DATE IS TODAYS OR NOT
   const isdatetoday = (date) => {
     const otherDate = new Date(date);
-    const todayDate = new Date();
-
     if (
       otherDate.getDate() === todayDate.getDate() &&
       otherDate.getMonth() === todayDate.getMonth() &&
@@ -40,21 +44,24 @@ const [{showform} , dispatch] = useStateValue();
     }
   };
 
+
+
+
+// FUNCTION FOR BOOKIGN SHOW ***************************************************
   const book_morning = () => {
     const today = new Date().getHours();
 
-    if (today >= 9 && isdatetoday(date) === true) {
+    if (today >= 0 && isdatetoday(date) === true) {
       setmornigTime(true);
       window.alert("Morning show can be booked before 9:00 am only");
     } else {
-      if (morningCount === 0) {
-        setmorningCount(0);
-      }
+      
       const response = window.confirm("Do you want to book a ticket?");
       if (response) {
+        setmorningFlag(true);
         formshow(response);
-        setmorningCount(morningCount - 1);
-      } else setmorningCount(morningCount);
+        
+      } 
     }
   };
 
@@ -65,18 +72,19 @@ const [{showform} , dispatch] = useStateValue();
       seteveningTime(true);
       window.alert("Evening show can be booked before 1:00 pm only");
     } else {
-      if (eveningCount === 0) {
-        seteveningCount(0);
-      }
+      
       const response = window.confirm("Do you want to book a ticket?");
       if (response) {
+        seteveningFlag(true);
         formshow(response);
-        seteveningCount(eveningCount - 1);
-      } else seteveningCount(eveningCount);
+        
+      }
     }
   };
 
 
+
+  // ***********************  form details function *******************************
     const formshow = (res) => {
         setbottomCard(false)
         if(res === true){
@@ -87,9 +95,6 @@ const [{showform} , dispatch] = useStateValue();
         }
     }
 
-//   if(formFlag === true ) {
-
-//   };
 
   return (
     <div className="booking_container">
@@ -97,15 +102,16 @@ const [{showform} , dispatch] = useStateValue();
       <section className="upper">
         <Calendar
           direction="vertical"
-          minDate={new Date()}
+          minDate={todayDate}
+          maxDate={maxDate}
           onChange={setdate}
           value={date}
-          className="calendar-custom-class"
+          className="custom-calendar"
         />
       </section>
 
       <div className="check_button">
-        <button onClick={() => setbottomCard(true)}>Check Avability</button>
+        <button onClick={() => setbottomCard(true)} className="button_check">Check Avability</button>
       </div>
 
       {/* SECTION TWO */}
@@ -114,7 +120,7 @@ const [{showform} , dispatch] = useStateValue();
         {/* ******************************************************************************************* */}
 
         {/*                       MORNING CARD                  */}
-        {morningCount === 0 ? (
+        {morningSeats === 0 ? (
           <div className="alert_card">
             <h1>
               <GoAlert />
@@ -132,12 +138,12 @@ const [{showform} , dispatch] = useStateValue();
                 <p className="info_heading">Timings:-</p>
                 <p className="information">11:00am - 12Noon</p>
                 <p className="info_heading">Seats Left:-</p>
-                <p className="information">{morningCount}</p>
+                <p className="information">{morningSeats}</p>
               </div>
               <div className="button_booking_card" onClick={book_morning}>
                 <button
                   disabled={
-                    morningCount === 0 && mornigTime === true ? true : false
+                    morningSeats === 0 && mornigTime === true ? true : false
                   }
                   className="booking_button"
                 >
@@ -151,7 +157,7 @@ const [{showform} , dispatch] = useStateValue();
         {/* ************************************************************************ */}
 
         {/*                                EVENING CARD                    */}
-        {eveningCount === 0 ? (
+        {eveningSeats === 0 ? (
           <div className="alert_card">
             <h1>
               <GoAlert />
@@ -169,12 +175,12 @@ const [{showform} , dispatch] = useStateValue();
                 <p className="info_heading">Timings:-</p>
                 <p className="information">3:00pm - 4:00pm</p>
                 <p className="info_heading">Seats Left:-</p>
-                <p className="information">{eveningCount}</p>
+                <p className="information">{eveningSeats}</p>
               </div>
               <div className="button_booking_card" onClick={book_evening}>
                 <button
                   disabled={
-                    eveningCount === 0 && eveningTime === true ? true : false
+                    eveningSeats === 0 && eveningTime === true ? true : false
                   }
                   className="booking_button"
                 >
@@ -190,7 +196,10 @@ const [{showform} , dispatch] = useStateValue();
       ) }
       {showform && (
         <div className="details_form">
-        <Bookingdetails/>
+        <Bookingdetails
+        morningFlag={morningFlag}
+        eveningFlag={eveningFlag}
+        />
       </div>
       )}
       
