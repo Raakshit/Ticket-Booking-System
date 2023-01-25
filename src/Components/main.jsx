@@ -103,7 +103,6 @@ const Main = () => {
             Did you only hear the excellence of Manipal University Jaipur? At the Experience Theatre, lets visually experience it.
 Experience Theater is a result of world-class infrastructure and immersion center where you can see the history, achievements,
 activities and all about Manipal University Jaipur in one place.
-
 Are you excited? Just book your ticket for this small show for free and enjoy the amazing Visual experience at the 
 Experience Theatre.
             </p> */}
