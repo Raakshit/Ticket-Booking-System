@@ -25,7 +25,7 @@ function Login() {
     if(number==="" || number === undefined  ) return setError("valid phone number");
     try{
         const response = await setUpRecaptcha(number);
-        // const response = true;
+
         console.log(response);
         setConfirmObj(response);
         setFlag(true);
@@ -39,7 +39,7 @@ function Login() {
 
 const verifyOtp = async(e) => {
   e.preventDefault();
-  console.log(otp)
+  console.log(otp);
   if(otp==="" || otp === null) return;
   try {
       setError(""); 
