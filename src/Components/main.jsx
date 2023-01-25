@@ -2,12 +2,17 @@ import React from "react";
 import "./main.css";
 import Login from "./Login";
 import therater from "./images/therater.jpg";
-import Dome from "./images/Dome.jpg";
+import MUJDome from "./images/MUJDome.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import G1 from "./images/G1.jpg";
-import G2 from "./images/G2.jpg";
-import G3 from "./images/G3.jpg";
+import ET1 from "./images/ET1.JPG";
+import ET2 from "./images/ET2.JPG";
+import ET3 from "./images/ET3.JPG";
+import ET5 from "./images/ET5.JPG";
+import ET6 from "./images/ET6.JPG";
+import ET7 from "./images/ET7.JPG";
+import ET8 from "./images/ET8.JPG";
+import ETGate from "./images/ETGate.JPG";
 import { useStateValue } from "../Context/StateProvider";
 import { actionType } from "../Context/reducer";
 
@@ -26,13 +31,13 @@ const Main = () => {
       <div className={`${showlogin ? "main_blur" : ""}`}>
       <section className="main_banner_card">
         <div className="banner_card">
-          <img src={therater} alt="" />
+          <img src={ETGate} alt="" />
         </div>
       </section>
       <section className="main_info">
         <div className="main_info_upper">
           <div className="image_card">
-            <img src={Dome} alt="" />
+            <img src={MUJDome} alt="" />
           </div>
           <div className="details_card">
             <h1>Detination Manipal University</h1>
@@ -44,7 +49,7 @@ const Main = () => {
 
         <div className="main_about_lower">
           <div className="gallery_section">
-            <h1>EVENT PHOTOS</h1>
+            <h1>PHOTOS</h1>
             <Splide
               options={{
                 perPage: 3,
@@ -56,37 +61,37 @@ const Main = () => {
             >
               <SplideSlide>
                 <div className="gallery_card">
-                  <img src={G1} alt="" />
+                  <img src={ET1} alt="" />
                 </div>
               </SplideSlide>
               <SplideSlide>
                 <div className="gallery_card">
-                  <img src={G2} alt="" />
+                  <img src={ET2} alt="" />
                 </div>
               </SplideSlide>
               <SplideSlide>
                 <div className="gallery_card">
-                  <img src={G3} alt="" />
+                  <img src={ET3} alt="" />
                 </div>
               </SplideSlide>
               <SplideSlide>
                 <div className="gallery_card">
-                  <img src={G1} alt="" />
+                  <img src={ET5} alt="" />
                 </div>
               </SplideSlide>
               <SplideSlide>
                 <div className="gallery_card">
-                  <img src={G2} alt="" />
+                  <img src={ET6} alt="" />
                 </div>
               </SplideSlide>
               <SplideSlide>
                 <div className="gallery_card">
-                  <img src={G3} alt="" />
+                  <img src={ET7} alt="" />
                 </div>
               </SplideSlide>
               <SplideSlide>
                 <div className="gallery_card">
-                  <img src={G1} alt="" />
+                  <img src={ET1} alt="" />
                 </div>
               </SplideSlide>
             </Splide>
@@ -95,12 +100,12 @@ const Main = () => {
           <div className="about_section">
             <h1>Why Manipal University ?</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reprehenderit eaque vero reiciendis placeat qui minima aut
-              quaerat, distinctio consequuntur ex dicta ipsum aspernatur odit
-              enim ad. Ex nam, ea cum natus quidem modi incidunt id dolorum,
-              rerum molestiae ut? Culpa magni pariatur reprehenderit ut iste
-              repudiandae, nisi ipsa. Fugiat, nam.
+            Did you only hear the excellence of Manipal University Jaipur? At the Experience Theatre, lets visually experience it.
+Experience Theater is a result of world-class infrastructure and immersion center where you can see the history, achievements,
+activities and all about Manipal University Jaipur in one place.
+
+Are you excited? Just book your ticket for this small show for free and enjoy the amazing Visual experience at the 
+Experience Theatre.
             </p>
           </div>
         </div>

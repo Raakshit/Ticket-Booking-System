@@ -44,6 +44,15 @@ const Bookingdetails = () => {
         type: actionType.SET_EVENING_SEATS,
         eveningSeats: eveningSeats-1,
       });
+      dispatch({
+        type: actionType.SET_UNIQUE_ID,
+        uniqueID: empId,
+      });
+      dispatch({
+        type: actionType.SET_USER_NAME,
+        username: name,
+      });
+      navigate("/ticket");
     }
   }
 

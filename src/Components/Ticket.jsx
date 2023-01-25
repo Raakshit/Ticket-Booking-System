@@ -1,24 +1,42 @@
-import React from "react";
+import React,{useRef} from "react";
+import QRCode from "qrcode.react";
+import jsPDF from "jspdf";
+import ET7 from "./images/ET7.JPG"
 import { useStateValue } from "../Context/StateProvider";
 import "./Ticket.css";
 
 const Ticket = () => {
   const [{uniqueID,morningShow,eveningShow,username,bookDate}, dispatch] = useStateValue();
+  // const [Month, setMonth] = useState("");
 
-  const printpdf = () => {
+  const printableAreaRef = useRef(null);
+
+  
+
+  const dayarr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const montharr = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUNE', 'JULY', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
+  const date = bookDate.getDate();
+  const month = bookDate.getMonth();
+  const day = bookDate.getDay();
+
+  const handlePrintClick = () => {
+    printableAreaRef.current.style.display = "block";
     window.print();
+    printableAreaRef.current.style.display = "none";
   };
 
+  const htmlString1 = `<Name>${username} </Name>`;
+  const htmlString2 = `<EmpId>${uniqueID} </EmpId>`;
+  const htmlString3 = `<Date>${date} </Date>`;
+  const htmlString4 = htmlString1 + "\n" + htmlString2 + "\n" +htmlString3 ;
 
 
   return (
     <div>
-      <div className="download_button">
-        <button onClick={printpdf}>Download PDF</button>
-      </div>
       {morningShow === true ?
       <>
-      <div className="ticket_main">
+      <div className="ticket_main"  id="printable-area" ref={printableAreaRef}>
       <div class="ticket">
         <div class="left">
           <div class="image">
@@ -27,15 +45,18 @@ const Ticket = () => {
               <span>ADMIT ONE</span>
               <span>ADMIT ONE</span>
             </p>
+            
+            <img src={ET7} alt="" />
             <div class="ticket-number">
-              <p>#20030220</p>
+              {/* <p>#20030220</p> */}
+              
             </div>
           </div>
           <div class="ticket-info">
             <p class="date">
-              <span>TUESDAY</span>
-              <span class="june-29">JUNE 29TH</span>
-              <span>2021</span>
+              <span>{dayarr[day]}</span>
+              <span class="june-29">{date} {montharr[month]}</span>
+              <span>2023</span>
             </p>
             <div class="show-name">
               <h1>
@@ -78,10 +99,10 @@ const Ticket = () => {
                 DOORS <span>@</span> 10:50 AM
               </p>
             </div>
-            {/* <div class="barcode">
-				<img src="https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb" alt="QR code">
-			</div> */}
-            <p class="ticket-number">#20030220</p>
+            <div class="barcode">
+            <QRCode value={htmlString4} />
+			</div>
+            <p class="ticket-number"></p>
           </div>
         </div>
       </div>
@@ -89,7 +110,11 @@ const Ticket = () => {
 
       </> :
       <>
-      <div className="ticket_main">
+
+      </>}
+      {eveningShow === true ? 
+      <>
+              <div className="ticket_main">
       <div class="ticket">
         <div class="left">
           <div class="image">
@@ -98,6 +123,7 @@ const Ticket = () => {
               <span>ADMIT ONE</span>
               <span>ADMIT ONE</span>
             </p>
+            <img src={ET7} alt="" />
             <div class="ticket-number">
               <p>#20030220</p>
             </div>
@@ -149,15 +175,19 @@ const Ticket = () => {
                 DOORS <span>@</span> 2:50 PM
               </p>
             </div>
-            {/* <div class="barcode">
-				<img src="https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb" alt="QR code">
-			</div> */}
+            <div class="barcode">
+            <QRCode value={htmlString4} />
+			</div>
             <p class="ticket-number">#20030220</p>
           </div>
         </div>
       </div>
     </div>
-      </>}
+      </> :
+      <></>}
+      <div className="download_button">
+      <button onClick={handlePrintClick}>Print</button>
+      </div>
     </div>
   );
 };

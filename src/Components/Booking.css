@@ -3,25 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Siemreap&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
 
-:root {
-    --calendar-bg-color: #262829;
-    --calendar-font-color: #FFF;
-    --weekdays-border-bottom-color: #404040;
-    --calendar-date-hover-color: #505050;
-    --calendar-current-date-color: #1b1f21;
-    --calendar-today-color: linear-gradient(to bottom, #03a9f4, #2196f3);
-    --calendar-today-innerborder-color: transparent;
-    --calendar-nextprev-bg-color: transparent;
-    --next-prev-arrow-color : #FFF;
-    --calendar-border-radius: 16px;
-    --calendar-prevnext-date-color: #484848
-}
 
 
 .booking_container{
+    /* background-color: yellow; */
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+    /* background-color: orange; */
+    /* opacity: 0.8; */
+    padding-top: 2rem;
 }
 
 .upper{
@@ -92,6 +83,7 @@
 
 .time_card{
     display: flex;
+    background: antiquewhite;
     flex-direction: column;
     overflow: hidden;
     margin: 1rem 0rem;
@@ -101,6 +93,7 @@
     border-radius: 30px;
     box-shadow: 0 0 20px 8px #d0d0d0;
     margin: 2rem;
+    
     /* margin-left: 4rem; */
 }
 

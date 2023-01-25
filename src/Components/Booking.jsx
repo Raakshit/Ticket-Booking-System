@@ -106,6 +106,10 @@ const [{showform,morningSeats,eveningSeats,morningShow,eveningShow,bookDate} , d
           type: actionType.SET_EVENING_SHOW,
           eveningShow: !eveningShow,
         });
+        dispatch({
+          type: actionType.SET_BOOKING_DATE,
+          bookDate: date,
+        });
         formshow(response);
         
       }
