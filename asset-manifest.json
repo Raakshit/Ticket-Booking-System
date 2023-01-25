@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Ticket-Booking-System/static/css/main.7e5fcfc0.css",
+    "main.js": "/Ticket-Booking-System/static/js/main.dc88356a.js",
+    "static/js/498.caf3e14b.chunk.js": "/Ticket-Booking-System/static/js/498.caf3e14b.chunk.js",
+    "static/js/703.3b0819bf.chunk.js": "/Ticket-Booking-System/static/js/703.3b0819bf.chunk.js",
+    "static/js/513.19994130.chunk.js": "/Ticket-Booking-System/static/js/513.19994130.chunk.js",
+    "static/media/ET8.JPG": "/Ticket-Booking-System/static/media/ET8.bbcf5c4522b7d712a731.JPG",
+    "static/media/ET2.JPG": "/Ticket-Booking-System/static/media/ET2.4e5f70d890dc08adfee9.JPG",
+    "static/media/ET3.JPG": "/Ticket-Booking-System/static/media/ET3.3bbfa73bc90ff659f6ca.JPG",
+    "static/media/ET5.JPG": "/Ticket-Booking-System/static/media/ET5.be7db7255b5991d7d155.JPG",
+    "static/media/ET1.JPG": "/Ticket-Booking-System/static/media/ET1.3f245e3e30def8a45d8c.JPG",
+    "static/media/MUJDome.png": "/Ticket-Booking-System/static/media/MUJDome.2b7b494e146a4af95edf.png",
+    "static/media/ET6.JPG": "/Ticket-Booking-System/static/media/ET6.0b5ae9899d23a1353741.JPG",
+    "static/media/ET7.JPG": "/Ticket-Booking-System/static/media/ET7.dcd9cccd2a5ebd096934.JPG",
+    "static/media/ETGate.JPG": "/Ticket-Booking-System/static/media/ETGate.5a890937b35cc94ec681.JPG",
+    "static/media/Loginback.JPG": "/Ticket-Booking-System/static/media/Loginback.84229df042f73091c165.JPG",
+    "static/media/evening.jpeg": "/Ticket-Booking-System/static/media/evening.11ff0ad4d06efabdd912.jpeg",
+    "static/media/Morning.jpeg": "/Ticket-Booking-System/static/media/Morning.c94e1740db42938bbb9c.jpeg",
+    "index.html": "/Ticket-Booking-System/index.html",
+    "main.7e5fcfc0.css.map": "/Ticket-Booking-System/static/css/main.7e5fcfc0.css.map",
+    "main.dc88356a.js.map": "/Ticket-Booking-System/static/js/main.dc88356a.js.map",
+    "498.caf3e14b.chunk.js.map": "/Ticket-Booking-System/static/js/498.caf3e14b.chunk.js.map",
+    "703.3b0819bf.chunk.js.map": "/Ticket-Booking-System/static/js/703.3b0819bf.chunk.js.map",
+    "513.19994130.chunk.js.map": "/Ticket-Booking-System/static/js/513.19994130.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e5fcfc0.css",
+    "static/js/main.dc88356a.js"
+  ]
+}
