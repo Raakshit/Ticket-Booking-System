@@ -74,11 +74,11 @@ const Ticket = () => {
               </p>
             </div>
             <p class="location">
-              <span>Manipal University</span>
+              <span>Manipal University Jaipur</span>
               <span class="separator">
                 <i class="far fa-smile"></i>
               </span>
-              <span>Jaipur, Rajasthan</span>
+              <span></span>
             </p>
           </div>
         </div>
