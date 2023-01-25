@@ -34,6 +34,7 @@ const Ticket = () => {
 
   return (
     <div>
+      
       {morningShow === true ?
       <>
       <div className="ticket_main"  id="printable-area" ref={printableAreaRef}>
@@ -185,10 +186,12 @@ const Ticket = () => {
     </div>
       </> :
       <></>}
-      {/* <div className="download_button">
-      <button onClick={handlePrintClick}>Print</button>
-      </div> */}
+      <div className="download_button">
+      <button onClick={handlePrintClick} className="button_download">Print</button>
+      </div>
+      
     </div>
+    
   );
 };
 

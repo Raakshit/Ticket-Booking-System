@@ -5,6 +5,7 @@ import "./Login.css";
 import { Link,useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-number-input";
 import { useUserAuth } from "../Context/UserAuthContext";
+import Loginback from "./images/Loginback.JPG";
 
 
 
@@ -59,6 +60,7 @@ const verifyOtp = async(e) => {
         {error && {error}}
       </section>
       <div class="card-image">
+        <img src={Loginback} alt="" />
         <h2 class="card-heading">
           Get started
           <small>Sign in to your account</small>
