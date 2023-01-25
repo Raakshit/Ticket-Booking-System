@@ -11,7 +11,7 @@ const Navbar = () => {
         <img src={Logo} alt="logo" />
         </div>
         </Link>
-        <h2><span># EXPERIENCE</span> THEATER</h2>
+        <h2><span># EXPERIENCE</span> THEATRE</h2>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./main.css";
 import Login from "./Login";
-import therater from "./images/therater.jpg";
+// import therater from "./images/therater.jpg";
 import MUJDome from "./images/MUJDome.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -40,7 +40,7 @@ const Main = () => {
             <img src={MUJDome} alt="" />
           </div>
           <div className="details_card">
-            <h1>Detination Manipal University</h1>
+            <h1>Destination Manipal University</h1>
             <div>
               <button onClick={loginshow}>BOOK TICKETS</button>
             </div>
@@ -98,15 +98,15 @@ const Main = () => {
           </div>
 
           <div className="about_section">
-            <h1>Why Manipal University ?</h1>
-            <p>
+            <p>#EXPRIENCE THE  <span style={ {color: "orange"}}>EXPERIENCE THEATRE </span></p>
+            {/* <p>
             Did you only hear the excellence of Manipal University Jaipur? At the Experience Theatre, lets visually experience it.
 Experience Theater is a result of world-class infrastructure and immersion center where you can see the history, achievements,
 activities and all about Manipal University Jaipur in one place.
 
 Are you excited? Just book your ticket for this small show for free and enjoy the amazing Visual experience at the 
 Experience Theatre.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

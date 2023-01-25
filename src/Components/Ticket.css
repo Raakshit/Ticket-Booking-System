@@ -41,8 +41,9 @@ html {
 	height: 200px;
 	width: 250px;
 	/* background-image: url("C:\Users\raksh\Desktop\Web_development\Colleage PRoject\booking_system\src\Components\images\ET7.JPG"); */
-	background-size: contain;
-	opacity: 0.85;
+	background-size: cover;
+	object-fit: cover;
+	/* opacity: 0.85; */
 }
 
 .admit-one {
@@ -199,5 +200,6 @@ img{
 	max-width: 100%;
     display: block;
     height: 264px;
+	object-fit: cover;
 }
 

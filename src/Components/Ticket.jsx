@@ -1,7 +1,7 @@
 import React,{useRef} from "react";
 import QRCode from "qrcode.react";
 import jsPDF from "jspdf";
-import ET7 from "./images/ET7.JPG"
+import Loginback from "./images/Loginback.JPG"
 import { useStateValue } from "../Context/StateProvider";
 import "./Ticket.css";
 
@@ -46,7 +46,7 @@ const Ticket = () => {
               <span>ADMIT ONE</span>
             </p>
             
-            <img src={ET7} alt="" />
+            <img src={Loginback} alt="" />
             <div class="ticket-number">
               {/* <p>#20030220</p> */}
               
@@ -69,7 +69,7 @@ const Ticket = () => {
                 11:00 AM <span>TO</span> 12:00 NOON
               </p>
               <p>
-                DOORS <span>@</span> 10:50 AM
+                REACH <span>@</span> 10:50 AM
               </p>
             </div>
             <p class="location">
@@ -96,7 +96,7 @@ const Ticket = () => {
                 11:00 AM <span>TO</span> 12:00 NOON
               </p>
               <p>
-                DOORS <span>@</span> 10:50 AM
+                REACH <span>@</span> 10:50 AM
               </p>
             </div>
             <div class="barcode">
@@ -123,7 +123,7 @@ const Ticket = () => {
               <span>ADMIT ONE</span>
               <span>ADMIT ONE</span>
             </p>
-            <img src={ET7} alt="" />
+            <img src={Loginback} alt="" />
             <div class="ticket-number">
               <p>#20030220</p>
             </div>
@@ -145,7 +145,7 @@ const Ticket = () => {
                 3:00 PM <span>TO</span> 4:00 PM
               </p>
               <p>
-                DOORS <span>@</span> 2:50 PM
+                REACH <span>@</span> 2:50 PM
               </p>
             </div>
             <p class="location">
@@ -172,7 +172,7 @@ const Ticket = () => {
                 3:00 PM <span>TO</span> 4:00 PM
               </p>
               <p>
-                DOORS <span>@</span> 2:50 PM
+                REACH <span>@</span> 2:50 PM
               </p>
             </div>
             <div class="barcode">

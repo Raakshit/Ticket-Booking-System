@@ -51,12 +51,12 @@ const [{showform,morningSeats,eveningSeats,morningShow,eveningShow,bookDate} , d
   const book_morning = () => {
     const today = new Date().getHours();
 
-    if (today >= 0 && isdatetoday(date) === true) {
+    if (today >= 9 && isdatetoday(date) === true) {
       setmornigTime(true);
       // window.alert("");
-      toast.error('Morning show can be booked before 9:00 am only', {
+      toast.error('Todays Morning show should be booked before 9:00 am only', {
         position: "top-center",
-        autoClose: 1500,
+        autoClose: 4500,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -88,9 +88,9 @@ const [{showform,morningSeats,eveningSeats,morningShow,eveningShow,bookDate} , d
     if (today >= 13 && isdatetoday(date) === true) {
       seteveningTime(true);
        // window.alert("");
-       toast.error('Morning show can be booked before 9:00 am only', {
+       toast.error('Todays Evening show can be booked before 1:00 pm only', {
         position: "top-center",
-        autoClose: 1500,
+        autoClose: 4500,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

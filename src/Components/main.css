@@ -128,7 +128,13 @@ button{
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
-
+.about_section > p{
+    font-size: xx-large;
+    font-weight: 800
+}
+.about_section > p > span{
+    font-size: 54px;
+}
 .loginshow_card{
     /* background-color: rgba(0, 0, 255, 0.4); */
     display: flex;

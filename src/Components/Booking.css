@@ -83,7 +83,7 @@
 
 .time_card{
     display: flex;
-    background: antiquewhite;
+    /* background: antiquewhite; */
     flex-direction: column;
     overflow: hidden;
     margin: 1rem 0rem;
