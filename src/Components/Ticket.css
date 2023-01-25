@@ -18,10 +18,12 @@ html {
 	letter-spacing: 0.1em;
 }  */
 .ticket_main{
+	position: fixed;
+	width: 100%;
     height: 100vh;
 	display: grid;
 	font-family: "Staatliches", cursive;
-	background: #d83565;
+	background: #FFD580;
 	color: black;
 	font-size: 14px;
 	letter-spacing: 0.1em;

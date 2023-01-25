@@ -185,9 +185,9 @@ const Ticket = () => {
     </div>
       </> :
       <></>}
-      <div className="download_button">
+      {/* <div className="download_button">
       <button onClick={handlePrintClick}>Print</button>
-      </div>
+      </div> */}
     </div>
   );
 };
