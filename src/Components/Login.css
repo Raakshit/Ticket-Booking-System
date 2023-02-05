@@ -44,8 +44,8 @@
  .card-image {
 	 border-radius: 8px;
 	 overflow: hidden;
-	 /* padding-bottom: 65%; */
-	 /* background-image: url('C:\Users\raksh\Desktop\Web_development\Colleage PRoject\booking_system\src\Components\images\Loginback.JPG'); */
+	 padding-bottom: 65%;
+	 background-image: url('C:\Users\raksh\Desktop\Web_development\Colleage PRoject\booking_system\src\Components\images\Loginback.JPG');
 	 background-repeat: no-repeat;
 	 background-size: 150%;
 	 background-position: 0 5%;

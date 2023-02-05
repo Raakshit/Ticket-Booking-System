@@ -126,14 +126,14 @@ const Ticket = () => {
             </p>
             <img src={Loginback} alt="" />
             <div class="ticket-number">
-              <p>#20030220</p>
+              {/* <p>#20030220</p> */}
             </div>
           </div>
           <div class="ticket-info">
             <p class="date">
-              <span>TUESDAY</span>
-              <span class="june-29">JUNE 29TH</span>
-              <span>2021</span>
+              <span>{dayarr[day]}</span>
+              <span class="june-29">{date} {montharr[month]}</span>
+              <span>2023</span>
             </p>
             <div class="show-name">
               <h1>

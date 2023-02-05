@@ -5,6 +5,7 @@ export const actionType = {
     SET_EVENING_SEATS: 'SET_EVENING_SEATS',
     SET_UNIQUE_ID: 'SET_UNIQUE_ID',
     SET_USER_NAME:'SET_USER_NAME',
+    SET_USER_EMAIL:'SET_USER_EMAIL',
     SET_MORNING_SHOW:'SET_MORNING_SHOW',
     SET_EVENING_SHOW:'SET_EVENING_SHOW',
     SET_BOOKING_DATE:'SET_BOOKING_DATE',
@@ -42,6 +43,11 @@ function reducer(state , action) {
                 return {
                  ...state,
                  username: action.username,
+            }
+        case actionType.SET_USER_EMAIL:
+                return {
+                 ...state,
+                 userEmail: action.userEmail,
             }
         case actionType.SET_MORNING_SHOW:
                 return {

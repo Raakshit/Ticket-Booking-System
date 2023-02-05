@@ -68,7 +68,7 @@ const Bookingdetails = () => {
         <form onSubmit={verifyDetails} class="card-form">
           <div class="input">
             <input 
-            // value={name}
+            value={name}
             onChange={(e)=>setName(e.target.value)}
             type="text" class="input-field" required />
             <label class="input-label">Full name</label>
