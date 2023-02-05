@@ -1,6 +1,4 @@
 {
-  "homepage": "https://Raakshit.github.io/Ticket-Booking-System",
-  "name": "booking_system",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
